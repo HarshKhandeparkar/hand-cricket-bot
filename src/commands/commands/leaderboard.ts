@@ -7,7 +7,7 @@ import { send } from '../../util/rate-limited-send';
 
 const rankMappingFunction = (score: IHighScore, i: number) => {
   return {
-    name: `#${i+1} ${score.tag}`,
+    name: `#${i+1} ${score.tag.split('#')[0]}`,
     value: `\`${score.score}\` runs.`,
     inline: true
   }
